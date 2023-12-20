@@ -772,10 +772,10 @@ if plotting_option == 'y':
         subject_results_folder = os.path.join(results_path, f"Subject_{subject_number}_results")
         os.makedirs(subject_epochs_folder, exist_ok=True)
 
-        fig_att_l_3ch = att_l.plot_joint(title=f'Attentive auditory left picked channels Subject {subject_number_list[n]}', picks=picked_channels_list_l)
-        fig_att_r_3ch = att_r.plot_joint(title=f'Attentive auditory right picked channels Subject {subject_number_list[n]}', picks=picked_channels_list_r)
-        fig_una_l_3ch = una_l.plot_joint(title=f'Unattentive auditory left picked channels Subject {subject_number_list[n]}', picks=picked_channels_list_l)
-        fig_una_r_3ch = una_r.plot_joint(title=f'Unattentive auditory right picked channels Subject {subject_number_list[n]}', picks=picked_channels_list_r)
+        fig_att_l_3ch = att_l_3ch.plot_joint(title=f'Attentive auditory left picked channels Subject {subject_number_list[n]}', picks=picked_channels_list_l)
+        fig_att_r_3ch = att_r_3ch.plot_joint(title=f'Attentive auditory right picked channels Subject {subject_number_list[n]}', picks=picked_channels_list_r)
+        fig_una_l_3ch = una_l_3ch.plot_joint(title=f'Unattentive auditory left picked channels Subject {subject_number_list[n]}', picks=picked_channels_list_l)
+        fig_una_r_3ch = una_r_3ch.plot_joint(title=f'Unattentive auditory right picked channels Subject {subject_number_list[n]}', picks=picked_channels_list_r)
 
         fig_att_l_3ch.savefig(os.path.join(subject_results_folder, f"Subject_{subject_number}_Attentive_Auditory_Left_3ch.png"))
         fig_att_r_3ch.savefig(os.path.join(subject_results_folder, f"Subject_{subject_number}_Attentive_Auditory_Right_3ch.png"))
